@@ -1,0 +1,18 @@
+class Solution {
+    public int scoreOfString(String s) {
+        int score =0;
+        for(int i=0;i<s.length()-1;i++){
+            int cascii = (int) s.charAt(i);
+            int nascii = (int) s.charAt(i+1);
+            score += Math.abs(cascii-nascii);
+        }
+        return score;
+    }
+    public void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        int score =0;
+        scoreOfString(s);
+        System.out.println(score);
+    }
+}
